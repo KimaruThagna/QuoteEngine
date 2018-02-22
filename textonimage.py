@@ -10,6 +10,8 @@ import sys,os
 #img root folder
 IMG='images/'
 #fonts root folder
+#TODO install the fonts in your local computer or server then provide the path to their location as shown below.
+# This is a path in my local machine
 FONTS='/home/kimaru/.local/share/fonts/'
 #resultant image location after combining text and image
 TOI='textOnImage/'
@@ -22,7 +24,7 @@ raw_data=open('text_image_pair.txt','r').read()
 ti_pair=raw_data.split('\n')
 if raw_data==None:
     print('Source file is empty\n populate text_image_pair.txt')
-    sys.exit(-1)
+    sys.exit(-1) 
 checker=1
 for ti_item in ti_pair:
     ti=ti_item.split('#') # get text and image name seperately
